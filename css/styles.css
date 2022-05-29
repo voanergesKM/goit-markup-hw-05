@@ -513,10 +513,10 @@ img {
 }
 
 .portfolio-list > .item {
+  transition: box-shadow 250ms var(--primary-cubic);
+
   flex-basis: calc((100% - 90px) / 3);
   margin: 15px 15px;
-
-  /* outline: 1px solid tomato; */
 }
 
 .description {
