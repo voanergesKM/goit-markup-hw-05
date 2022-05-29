@@ -61,13 +61,6 @@ img {
   display: none;
 }
 
-.link.current {
-  color: var(--accent-color);
-}
-.site-nav .link {
-  position: relative;
-}
-
 .link.current::after {
   content: '';
   position: absolute;
@@ -136,6 +129,7 @@ img {
 }
 
 .contact .link {
+  transition: color 250ms var(--primary-cubic);
   display: flex;
   align-items: center;
 
@@ -144,8 +138,15 @@ img {
 }
 
 .site-nav .link {
+  position: relative;
   color: var(--sec-fontcolor);
   text-decoration: none;
+
+  transition: color 250ms var(--primary-cubic);
+}
+
+.link.current {
+  color: var(--accent-color);
 }
 
 .navigation .link {
@@ -204,6 +205,8 @@ img {
 }
 
 .hero-button {
+  transition: background-color 250ms var(--primary-cubic);
+
   display: inline-block;
   padding: 10px 32px;
   margin-left: auto;
@@ -249,6 +252,8 @@ img {
 }
 
 .filter .button {
+  transition: background-color 250ms var(--primary-cubic), color 250ms var(--primary-cubic);
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -343,10 +348,13 @@ img {
   width: 100%;
   height: 70px;
 
-  padding: 27px 0px;
   background: rgba(47, 48, 58, 0.8);
 
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
   text-transform: uppercase;
   color: var(--color-white);
 }
@@ -424,6 +432,8 @@ img {
 }
 
 .social-link {
+  transition: fill 250ms var(--primary-cubic), background-color 250ms var(--primary-cubic);
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -432,11 +442,6 @@ img {
   height: 44px;
   fill: var(--social-primary-color);
 }
-
-/* .social-icon {
-  width: 20px;
-  height: 20px;
-} */
 
 .command .social-link:hover,
 .command .social-link:focus {
@@ -464,6 +469,8 @@ img {
 }
 
 .clients-link {
+  transition: border 250ms var(--primary-cubic), fill 250ms var(--primary-cubic);
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -612,6 +619,12 @@ img {
   font-style: normal;
   line-height: 1.71;
 }
+
+.address .contact,
+.address .coords {
+  transition: color 250ms var(--primary-cubic);
+}
+
 .address-block {
   margin-right: 70px;
 }
@@ -638,6 +651,7 @@ img {
 }
 
 .join .social-link {
+  transition: background-color 250ms var(--primary-cubic);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   fill: var(--color-white);
